@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+  <h1>EECS 368 Project: Image Manipulation</h1>
+<div class="tab">
+    <div class="button">
+      <button onclick = "showPanels(0, 'white')">Green Screen</button>
+      <button onclick = "showPanels(1, 'white')">Grayscale Filter</button>
+      <button onclick = "showPanels(2, 'white')">Red Filter</button>
+      <button onclick = "showPanels(3, 'white')">Blue Filter</button>
+      <button onclick = "showPanels(4, 'white')">Green Filter</button>
+      <button onclick = "showPanels(5, 'white')">RGB Filter</button>
+    </div>
+    <div class="TabPanel">
+        <div id="d1">
+          <h1>Green Screen!</h1>
+            <canvas id="can" width="150" height="150"></canvas>
+            <canvas id="can2" width="150" height="150"></canvas><br>
+            <canvas id="can3" width="150" height = "150"></canvas>
+            <br><br>
+            <span>Foreground: <input type="file" multiple="false" accept="image/*" id="fgimage" onchange="uploadfg()"> <br><br>
+            Background: <input type="file" multiple="false" accept="image/*" id="bgimage" onchange="uploadbg()"></span>
+            <br><br>
+            <input type="button" value="Create Composite" id="create" onclick="create()">
+            <input type="button" value="Clear" onclick="clean()"><p><br></p> 
+        </div>
+    </div><p><br></p>
+    <div class="TabPanel">
+      <div id="d2">
+        <h1>Gray Filter!</h1>
+        <canvas id="can4" width="150" height="150"></canvas>
+        <canvas id="can5" width="150" height="150"></canvas>
+        <br><br>
+        <span>Choose Image: <input type="file" multiple="false" accept="image/*" id="1" onchange="uploadGrey()"></span>
+        <br><br>
+        <input type="button" value="Apply Filter" id="create" onclick="makeGrey()"><p><br></p> 
+      </div>
+    </div>
+    <div class="TabPanel">
+
+        <h1>Red Filter!</h1>
+        <canvas id="can6" width="150" height="150"></canvas>
+        <canvas id="can7" width="150" height="150"></canvas>
+        <br><br>
+        <span>Choose Image: <input type="file" multiple="false" accept="image/*" id="2" onchange="uploadRed()"></span>
+        <br><br>
+        <input type="button" value="Apply Filter" id="create" onclick="makeRed()"><p><br></p> 
+
+    </div>
+    <div class="TabPanel">
+      <div id="d4">
+        <h1>Blue Filter!</h1>
+        <canvas id="can8" width="150" height="150"></canvas>
+        <canvas id="can9" width="150" height="150"></canvas>
+        <br><br>
+        <span>Choose Image: <input type="file" multiple="false" accept="image/*" id="3" onchange="uploadBlue()"></span>
+        <br><br>
+        <input type="button" value="Apply Filter" id="create" onclick="makeBlue()"><p><br></p> 
+      </div>
+    </div>
+    <div class="TabPanel">
+      <div id="d5">
+        <h1>Green Filter!</h1>
+        <canvas id="can10" width="150" height="150"></canvas>
+        <canvas id="can11" width="150" height="150"></canvas>
+        <br><br>
+        <span>Choose Image: <input type="file" multiple="false" accept="image/*" id="4" onchange="uploadGreen()"></span>
+        <br><br>
+        <input type="button" value="Apply Filter" id="create" onclick="makeGreen()"><p><br></p> 
+      </div>
+    </div>
+    <div class="TabPanel">
+      <div id="d6">
+        <h1>RGB Filter!</h1>
+        <canvas id="can12" width="150" height="150"></canvas>
+        <canvas id="can13" width="150" height="150"></canvas>
+        <br><br>
+        <span>Choose Image: <input type="file" multiple="false" accept="image/*" id="5" onchange="uploadRainbow()"></span>
+        <br><br>
+        <input type="button" value="Apply Filter" id="create" onclick="makeRainbow()"><p><br></p> 
+      </div>
+    </div>
+</div><p><br></p>
+<div>
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+<script src = "script.js"></script>
+</div>
+</body>
+</html>
+
+
+  
