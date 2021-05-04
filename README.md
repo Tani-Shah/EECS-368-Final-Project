@@ -1,4 +1,4 @@
-# EECS-368-Final-Project
+# EECS 368 Final Project: Image Manipulation
 
 This final project is written in HTML, CSS and JavaScript. It a a webpage in which you can manipulate images by adding different filters, or combine two images using green screens into a single image. 
 
